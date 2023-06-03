@@ -26,9 +26,7 @@ class Chronometer {
     //   return 0;
     // } else {
 
-    const minutes = Math.floor(this.currentTime / 60);
-    const seconds = this.currentTime - minutes * 60;
-    return seconds;
+    return Math.floor(this.currentTime / 100 - this.getMinutes() * 60);
   }
 
   getCentiseconds() {
